@@ -64,6 +64,9 @@ header, footer{
 
 /* Header Styles */
 header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     height: 600px;
     background-color: var(--wht);
     background-image: url("images/plants-on-table.jpg");
@@ -133,6 +136,7 @@ nav{
 }
 
 nav ul{
+    display: flex;
     list-style-type: none;
     padding: 0;
     /* Styles were added here to arrange the content, I used flexbox */
@@ -163,6 +167,8 @@ nav a svg{
 nav a span{
     display: block;
     position: relative;
+    top: -140px;
+    z-index: 1;
     /* Styles were added here to arrange the content, I used top and z-index for this */
     /* TO DO */
 }
@@ -220,6 +226,9 @@ p{
 
 /* Plants Section */
 #plants{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px 32px;
     background-color: var(--wht);
     padding: 96px 32px;
     /* Styles were added here to arrange the content, I used grid */
@@ -227,11 +236,16 @@ p{
 }
 
 #plants h3, #plants > p{
+    display: grid;
+    grid-column: 1/-1;
     /* Styles were added here to arrange the content, these are grid children styles */
     /* TO DO */
 }
 
 #plants section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     /* Styles were added here to arrange the content, I used flexbox */
     /* TO DO */
     margin: 32px auto 0;
@@ -242,6 +256,8 @@ p{
 }
 
 #plants img{
+    order: -1;
+
     /* Styles were added here to arrange the content, I used a property for a flexbox child to change the order that the content appears on the page */
     /* TO DO */
     width: 100%;
@@ -261,6 +277,9 @@ p{
 
 /* Contact Section */
 #contact{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px 32px;
     color: var(--wht);
     padding: 64px 32px;
     /* Styles were added here to arrange the content, I used grid */
@@ -269,6 +288,7 @@ p{
 
 /* Contact Heading and Paragraph */
 #contact h3, #contact > p{
+    grid-column: 1/-1;
     /* Styles were added here to arrange the content, these are grid children styles */
     /* TO DO */
 }
@@ -355,6 +375,9 @@ th:nth-of-type(even), td:nth-of-type(even){
 
 /* Social Media List */
 #social ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
     /* Styles were added here to arrange the content, I used grid */
     /* TO DO */
     width: fit-content;
@@ -365,6 +388,7 @@ th:nth-of-type(even), td:nth-of-type(even){
 
 /* Heading for Social Media Section */
 #social h4{
+    grid-column: 1/-1;
     /* Styles were added here to arrange the content, these are grid children styles */
     /* TO DO */
 }
